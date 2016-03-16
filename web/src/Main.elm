@@ -1,7 +1,8 @@
 module Main where
 
-import Html exposing (Html, text)
+import Html exposing (Html, ul, li, text)
 import Http
+import List
 import Json.Decode exposing ((:=), Decoder, string, int, float, list, object1, object4)
 import Task exposing (Task, andThen, toMaybe)
 
@@ -16,7 +17,9 @@ port tasks =
 view : Maybe Response -> Html
 view response =
     case response of
-        Just r -> text "yay"
+        Just r ->
+            ul []
+                (List.map (\i -> li [] [text i.name]) r.ingredients)
         Nothing -> text "boo"
 
 main =
