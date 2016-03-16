@@ -14,3 +14,14 @@ port tasks =
 
 main =
     Signal.map text results.signal
+
+type alias Ingredient =
+    { name : String
+    , value : Int
+    , weight : Float
+    , effects : List String
+    }
+
+type alias Response =
+    { ingredients : List Ingredient
+    }
