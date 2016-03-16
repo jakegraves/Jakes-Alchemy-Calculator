@@ -2,6 +2,7 @@ module Main where
 
 import Html exposing (text)
 import Http
+import Json.Decode exposing ((:=), Decoder, string, int, float, list, object1, object4)
 import Task exposing (Task, andThen)
 
 
@@ -25,3 +26,15 @@ type alias Ingredient =
 type alias Response =
     { ingredients : List Ingredient
     }
+
+ingredient : Decoder Ingredient
+ingredient =
+    object4 Ingredient
+        ("name" := string)
+        ("value" := int)
+        ("weight" := float)
+        ("effects" := list string)
+
+response : Decoder Response
+response =
+    object1 Response ("ingredients" := list ingredient)
