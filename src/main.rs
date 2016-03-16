@@ -1,8 +1,12 @@
 extern crate iron;
+extern crate mount;
+extern crate staticfile;
 
 use iron::prelude::*;
 use iron::mime::Mime;
 use iron::status;
+use mount::Mount;
+use staticfile::Static;
 
 static JSON_RESPONSE: &'static str = "{
     \"ingredients\": [
@@ -25,5 +29,8 @@ fn main() {
         let content_type = "application/json".parse::<Mime>().unwrap();
         Ok(Response::with((content_type, status::Ok, JSON_RESPONSE)))
     }
-    Iron::new(ingredients).http("localhost:3000").unwrap();
+    let mut mount = Mount::new();
+    mount.mount("/", Static::new("web/"));
+    mount.mount("/api/", ingredients);
+    Iron::new(mount).http("localhost:3000").unwrap();
 }
