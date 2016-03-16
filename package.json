@@ -1,0 +1,15 @@
+{
+  "name": "skyrim-alchemy-toolbox",
+  "version": "0.1.0",
+  "description": "skyrim-alchemy-toolbox",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zbigniew Siciarz",
+  "devDependencies": {
+    "elm-webpack-loader": "^2.0.1",
+    "webpack": "^1.12.14"
+  }
+}
