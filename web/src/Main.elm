@@ -1,20 +1,26 @@
 module Main where
 
-import Html exposing (text)
+import Html exposing (Html, text)
 import Http
 import Json.Decode exposing ((:=), Decoder, string, int, float, list, object1, object4)
-import Task exposing (Task, andThen)
+import Task exposing (Task, andThen, toMaybe)
 
 
-results : Signal.Mailbox String
-results = Signal.mailbox ""
+results : Signal.Mailbox (Maybe Response)
+results = Signal.mailbox Nothing
 
 port tasks : Task Http.Error ()
 port tasks =
-    Http.getString "/api/" `andThen` Signal.send results.address
+    toMaybe (Http.get response "/api/") `andThen` Signal.send results.address
+
+view : Maybe Response -> Html
+view response =
+    case response of
+        Just r -> text "yay"
+        Nothing -> text "boo"
 
 main =
-    Signal.map text results.signal
+    Signal.map view results.signal
 
 type alias Ingredient =
     { name : String
