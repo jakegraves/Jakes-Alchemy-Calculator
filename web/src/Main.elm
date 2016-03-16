@@ -5,6 +5,7 @@ import Http
 import Task exposing (Task, andThen)
 
 
+results : Signal.Mailbox String
 results = Signal.mailbox ""
 
 port tasks : Task Http.Error ()
