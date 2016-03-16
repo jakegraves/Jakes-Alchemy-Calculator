@@ -1,11 +1,13 @@
 extern crate iron;
 extern crate mount;
+extern crate logger;
 extern crate staticfile;
 
 use iron::prelude::*;
 use iron::mime::Mime;
 use iron::status;
 use mount::Mount;
+use logger::Logger;
 use staticfile::Static;
 
 static JSON_RESPONSE: &'static str = "{
@@ -32,5 +34,7 @@ fn main() {
     let mut mount = Mount::new();
     mount.mount("/", Static::new("web/"));
     mount.mount("/api/", ingredients);
-    Iron::new(mount).http("localhost:3000").unwrap();
+    let mut chain = Chain::new(mount);
+    chain.link(Logger::new(None));
+    Iron::new(chain).http("localhost:3000").unwrap();
 }

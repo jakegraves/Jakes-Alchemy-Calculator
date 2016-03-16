@@ -6,4 +6,5 @@ authors = ["Zbigniew Siciarz <zbigniew@siciarz.net>"]
 [dependencies]
 iron = "~0.2.6"
 mount = "~0.0.10"
+logger = "~0.0.3"
 staticfile = "~0.1.0"
