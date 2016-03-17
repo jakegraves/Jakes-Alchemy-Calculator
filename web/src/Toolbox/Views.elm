@@ -1,6 +1,7 @@
 module Toolbox.Views (..) where
 
-import Html exposing (Html, ul, li, text)
+import Html exposing (..)
+import Html.Attributes exposing (..)
 import Toolbox.Types exposing (Response)
 
 
@@ -10,7 +11,16 @@ view response =
     Just r ->
       ul
         []
-        (List.map (\i -> li [] [ text i.name ]) r.ingredients)
+        (List.map
+          (\i ->
+            li
+              []
+              [ img [ src i.image, width 32, height 32 ] []
+              , text i.name
+              ]
+          )
+          r.ingredients
+        )
 
     Nothing ->
       text "boo"
