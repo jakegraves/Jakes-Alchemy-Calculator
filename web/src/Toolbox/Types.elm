@@ -5,6 +5,7 @@ type alias Ingredient =
   { name : String
   , value : Int
   , weight : Float
+  , image : String
   , effects : List String
   }
 
