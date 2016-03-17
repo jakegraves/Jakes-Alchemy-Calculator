@@ -16,6 +16,7 @@ static JSON_RESPONSE: &'static str = "{
             \"name\": \"Creep Cluster\",
             \"value\": 1,
             \"weight\": 0.2,
+            \"image\": \"http://www.uesp.net/w/images/1/15/SR-icon-ingredient-Creep_Cluster.png\",
             \"effects\": [
                 \"Restore Magicka\",
                 \"Damage Stamina Regen\",
