@@ -1,10 +1,12 @@
 module Main where
 
-import Html exposing (Html, ul, li, text)
 import Http
 import List
-import Json.Decode exposing ((:=), Decoder, string, int, float, list, object1, object4)
 import Task exposing (Task, andThen, toMaybe)
+
+import Toolbox.Decoders exposing (response)
+import Toolbox.Types exposing (Ingredient, Response)
+import Toolbox.Views exposing (view)
 
 
 results : Signal.Mailbox (Maybe Response)
@@ -14,36 +16,5 @@ port tasks : Task Http.Error ()
 port tasks =
     toMaybe (Http.get response "/api/") `andThen` Signal.send results.address
 
-view : Maybe Response -> Html
-view response =
-    case response of
-        Just r ->
-            ul []
-                (List.map (\i -> li [] [text i.name]) r.ingredients)
-        Nothing -> text "boo"
-
 main =
     Signal.map view results.signal
-
-type alias Ingredient =
-    { name : String
-    , value : Int
-    , weight : Float
-    , effects : List String
-    }
-
-type alias Response =
-    { ingredients : List Ingredient
-    }
-
-ingredient : Decoder Ingredient
-ingredient =
-    object4 Ingredient
-        ("name" := string)
-        ("value" := int)
-        ("weight" := float)
-        ("effects" := list string)
-
-response : Decoder Response
-response =
-    object1 Response ("ingredients" := list ingredient)
