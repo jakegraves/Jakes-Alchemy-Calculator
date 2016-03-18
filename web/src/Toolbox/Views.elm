@@ -10,7 +10,7 @@ view response =
   case response of
     Just r ->
       ul
-        []
+        [ class "list-group" ]
         (List.map ingredientItem r.ingredients)
 
     Nothing ->
@@ -20,7 +20,7 @@ view response =
 ingredientItem : Ingredient -> Html
 ingredientItem i =
   li
-    []
+    [ class "list-group-item" ]
     [ img [ src i.image, width 32, height 32 ] []
     , text i.name
     ]
