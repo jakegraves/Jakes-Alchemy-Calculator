@@ -9,7 +9,15 @@
   },
   "author": "Zbigniew Siciarz",
   "devDependencies": {
+    "css-loader": "^0.23.1",
     "elm-webpack-loader": "^2.0.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2"
   }
 }
