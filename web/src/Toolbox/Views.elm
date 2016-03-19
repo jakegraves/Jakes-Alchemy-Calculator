@@ -11,8 +11,26 @@ view address model =
   case model.response of
     Just r ->
       div
-        [ class "list-group" ]
-        (List.map ingredientItem r.ingredients)
+        [ class "container" ]
+        [ div
+            [ class "row" ]
+            [ div
+                [ class "col-sm-4" ]
+                [ div
+                    [ class "card" ]
+                    [ div
+                        [ class "card-block" ]
+                        [ h4 [ class "card-title" ] [ text "Ingredients" ] ]
+                    , div
+                        [ class "list-group list-group-flush" ]
+                        (List.map ingredientItem r.ingredients)
+                    ]
+                ]
+            , div
+                [ class "col-sm-8" ]
+                [ h2 [] [ text "Recipe (TODO)" ] ]
+            ]
+        ]
 
     Nothing ->
       div
