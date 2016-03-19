@@ -6,6 +6,7 @@ import Toolbox.Types exposing (Model, Response)
 
 type Action
   = DownloadedIngredients (Maybe Response)
+  | NoOp
 
 
 update : Action -> Model -> ( Model, Effects Action )
@@ -15,3 +16,6 @@ update action model =
       ( { model | response = maybeResponse }
       , Effects.none
       )
+
+    NoOp ->
+      ( model, Effects.none )
