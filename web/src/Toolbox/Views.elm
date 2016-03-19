@@ -2,7 +2,8 @@ module Toolbox.Views (..) where
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Toolbox.Types exposing (Action, Ingredient, Model)
+import Toolbox.Action exposing (Action)
+import Toolbox.Types exposing (Ingredient, Model)
 
 
 view : Signal.Address Action -> Model -> Html

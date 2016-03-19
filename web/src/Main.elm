@@ -5,8 +5,9 @@ import Http
 import List
 import StartApp
 import Task exposing (Task, andThen, toMaybe)
+import Toolbox.Action exposing (Action, update)
 import Toolbox.Decoders exposing (response)
-import Toolbox.Types exposing (Action, Ingredient, Response, Model)
+import Toolbox.Types exposing (Ingredient, Response, Model)
 import Toolbox.Views exposing (view)
 
 
@@ -15,20 +16,11 @@ initialModel =
   { response = Nothing }
 
 
-update : Action -> Model -> ( Model, Effects Action )
-update action model =
-  case action of
-    Toolbox.Types.DownloadedIngredients maybeResponse ->
-      ( { model | response = maybeResponse }
-      , Effects.none
-      )
-
-
 downloadIngredients : Effects Action
 downloadIngredients =
   Http.get response "/api/"
     |> Task.toMaybe
-    |> Task.map Toolbox.Types.DownloadedIngredients
+    |> Task.map Toolbox.Action.DownloadedIngredients
     |> Effects.task
 
 
