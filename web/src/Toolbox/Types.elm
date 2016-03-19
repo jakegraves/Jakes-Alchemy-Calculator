@@ -17,7 +17,3 @@ type alias Response =
 
 type alias Model =
   { response : Maybe Response }
-
-
-type Action
-  = DownloadedIngredients (Maybe Response)
