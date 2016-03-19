@@ -15,7 +15,9 @@ view address model =
         (List.map ingredientItem r.ingredients)
 
     Nothing ->
-      text "boo"
+      div
+        [ class "alert alert-info" ]
+        [ text "Please wait..." ]
 
 
 ingredientItem : Ingredient -> Html
