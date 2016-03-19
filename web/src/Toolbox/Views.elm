@@ -2,7 +2,9 @@ module Toolbox.Views (..) where
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Toolbox.Action exposing (Action)
+import Html.Events exposing (..)
+import Json.Decode
+import Toolbox.Action exposing (Action(..))
 import Toolbox.Types exposing (Ingredient, Model)
 
 
@@ -23,7 +25,7 @@ view address model =
                         [ h4 [ class "card-title" ] [ text "Ingredients" ] ]
                     , div
                         [ class "list-group list-group-flush" ]
-                        (List.map ingredientItem r.ingredients)
+                        (List.map (ingredientItem address) r.ingredients)
                     ]
                 ]
             , div
@@ -38,10 +40,18 @@ view address model =
         [ text "Please wait..." ]
 
 
-ingredientItem : Ingredient -> Html
-ingredientItem i =
+ingredientItem : Signal.Address Action -> Ingredient -> Html
+ingredientItem address i =
   a
-    [ class "list-group-item", href "#" ]
+    [ class "list-group-item", href "#", clickHandler address NoOp ]
     [ img [ src i.image, width 32, height 32 ] []
     , text i.name
     ]
+
+
+clickHandler address action =
+  onWithOptions
+    "click"
+    { stopPropagation = True, preventDefault = True }
+    Json.Decode.value
+    (\_ -> Signal.message address action)
