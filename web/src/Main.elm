@@ -2,12 +2,11 @@ module Main (..) where
 
 import Effects exposing (Effects, Never)
 import Http
-import List
 import StartApp
-import Task exposing (Task, andThen, toMaybe)
+import Task
 import Toolbox.Action exposing (Action, update)
 import Toolbox.Decoders exposing (response)
-import Toolbox.Types exposing (Ingredient, Response, Model)
+import Toolbox.Types exposing (Model)
 import Toolbox.Views exposing (view)
 
 
