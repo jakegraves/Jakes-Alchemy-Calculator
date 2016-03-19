@@ -10,7 +10,7 @@ view : Signal.Address Action -> Model -> Html
 view address model =
   case model.response of
     Just r ->
-      ul
+      div
         [ class "list-group" ]
         (List.map ingredientItem r.ingredients)
 
@@ -22,8 +22,8 @@ view address model =
 
 ingredientItem : Ingredient -> Html
 ingredientItem i =
-  li
-    [ class "list-group-item" ]
+  a
+    [ class "list-group-item", href "#" ]
     [ img [ src i.image, width 32, height 32 ] []
     , text i.name
     ]
