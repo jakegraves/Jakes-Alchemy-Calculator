@@ -2,12 +2,12 @@ module Toolbox.Views (..) where
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Toolbox.Types exposing (Ingredient, Response)
+import Toolbox.Types exposing (Action, Ingredient, Model)
 
 
-view : Maybe Response -> Html
-view response =
-  case response of
+view : Signal.Address Action -> Model -> Html
+view address model =
+  case model.response of
     Just r ->
       ul
         [ class "list-group" ]
