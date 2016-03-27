@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Zbigniew Siciarz <zbigniew@siciarz.net>"]
 
 [dependencies]
-iron = "~0.2.6"
-mount = "~0.0.10"
+iron = "~0.3.0"
+mount = "~0.1.0"
 logger = "~0.0.3"
-staticfile = "~0.1.0"
+staticfile = "~0.2.0"
