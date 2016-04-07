@@ -6,13 +6,8 @@ import StartApp
 import Task
 import Toolbox.Action exposing (Action(..), update)
 import Toolbox.Decoders exposing (response)
-import Toolbox.Types exposing (Model)
+import Toolbox.Types exposing (Model, initialModel)
 import Toolbox.Views exposing (view)
-
-
-initialModel : Model
-initialModel =
-  { response = Nothing }
 
 
 downloadIngredients : Effects Action

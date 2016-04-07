@@ -17,3 +17,8 @@ type alias Response =
 
 type alias Model =
   { response : Maybe Response }
+
+
+initialModel : Model
+initialModel =
+  { response = Nothing }
