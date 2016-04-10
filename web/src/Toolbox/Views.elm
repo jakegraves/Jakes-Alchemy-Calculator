@@ -6,7 +6,7 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Json.Decode
 import Toolbox.Action exposing (Action(..))
-import Toolbox.Types exposing (Ingredient, Model)
+import Toolbox.Types exposing (Ingredient, IngredientID, Model)
 
 
 view : Signal.Address Action -> Model -> Html
@@ -26,7 +26,7 @@ view address model =
                         [ h4 [ class "card-title" ] [ text "Ingredients" ] ]
                     , div
                         [ class "list-group list-group-flush" ]
-                        (List.map (ingredientItem address) (Dict.values model.ingredients))
+                        (List.map (ingredientItem address) (Dict.toList model.ingredients))
                     ]
                 ]
             , div
@@ -41,8 +41,8 @@ view address model =
         [ text "Please wait..." ]
 
 
-ingredientItem : Signal.Address Action -> Ingredient -> Html
-ingredientItem address i =
+ingredientItem : Signal.Address Action -> ( IngredientID, Ingredient ) -> Html
+ingredientItem address ( id, i ) =
   a
     [ class "list-group-item", href "#", clickHandler address NoOp ]
     [ img [ src i.image, width 32, height 32 ] []
