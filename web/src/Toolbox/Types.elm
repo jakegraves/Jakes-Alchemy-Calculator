@@ -23,10 +23,12 @@ type alias Response =
 
 type alias Model =
   { ingredients : Dict.Dict IngredientID Ingredient
+  , selectedIds : List IngredientID
   }
 
 
 initialModel : Model
 initialModel =
   { ingredients = Dict.empty
+  , selectedIds = []
   }

@@ -14,7 +14,7 @@ update : Action -> Model -> ( Model, Effects Action )
 update action model =
   case action of
     DownloadedIngredients maybeResponse ->
-      ( responseToModel maybeResponse
+      ( responseToModel model maybeResponse
       , Effects.none
       )
 
@@ -31,11 +31,11 @@ enumerate list =
     List.map2 (,) ids list
 
 
-responseToModel : Maybe Response -> Model
-responseToModel maybeResponse =
+responseToModel : Model -> Maybe Response -> Model
+responseToModel model maybeResponse =
   case maybeResponse of
     Just r ->
-      { ingredients = enumerate r.ingredients |> Dict.fromList }
+      { model | ingredients = enumerate r.ingredients |> Dict.fromList }
 
     Nothing ->
-      { ingredients = Dict.empty }
+      { model | ingredients = Dict.empty }
