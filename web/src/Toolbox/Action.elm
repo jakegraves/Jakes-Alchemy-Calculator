@@ -22,17 +22,20 @@ update action model =
       ( model, Effects.none )
 
 
+enumerate : List a -> List ( Int, a )
+enumerate list =
+  let
+    ids =
+      [1..(List.length list - 1)]
+  in
+    List.map2 (,) ids list
+
+
 responseToModel : Maybe Response -> Model
 responseToModel maybeResponse =
   case maybeResponse of
     Just r ->
-      { ingredients =
-          let
-            ids =
-              [1..(List.length r.ingredients - 1)]
-          in
-            List.map2 (,) ids r.ingredients |> Dict.fromList
-      }
+      { ingredients = enumerate r.ingredients |> Dict.fromList }
 
     Nothing ->
       { ingredients = Dict.empty }
