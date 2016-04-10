@@ -1,5 +1,6 @@
 module Toolbox.Views (..) where
 
+import Dict
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
@@ -10,8 +11,8 @@ import Toolbox.Types exposing (Ingredient, Model)
 
 view : Signal.Address Action -> Model -> Html
 view address model =
-  case model.response of
-    Just r ->
+  case Dict.isEmpty model.ingredients of
+    False ->
       div
         [ class "container" ]
         [ div
@@ -25,7 +26,7 @@ view address model =
                         [ h4 [ class "card-title" ] [ text "Ingredients" ] ]
                     , div
                         [ class "list-group list-group-flush" ]
-                        (List.map (ingredientItem address) r.ingredients)
+                        (List.map (ingredientItem address) (Dict.values model.ingredients))
                     ]
                 ]
             , div
@@ -34,7 +35,7 @@ view address model =
             ]
         ]
 
-    Nothing ->
+    True ->
       div
         [ class "alert alert-info" ]
         [ text "Please wait..." ]

@@ -1,5 +1,6 @@
 module Toolbox.Action (..) where
 
+import Dict
 import Effects exposing (Effects)
 import Toolbox.Types exposing (Model, Response)
 
@@ -13,9 +14,25 @@ update : Action -> Model -> ( Model, Effects Action )
 update action model =
   case action of
     DownloadedIngredients maybeResponse ->
-      ( { model | response = maybeResponse }
+      ( responseToModel maybeResponse
       , Effects.none
       )
 
     NoOp ->
       ( model, Effects.none )
+
+
+responseToModel : Maybe Response -> Model
+responseToModel maybeResponse =
+  case maybeResponse of
+    Just r ->
+      { ingredients =
+          let
+            ids =
+              [1..(List.length r.ingredients - 1)]
+          in
+            List.map2 (,) ids r.ingredients |> Dict.fromList
+      }
+
+    Nothing ->
+      { ingredients = Dict.empty }

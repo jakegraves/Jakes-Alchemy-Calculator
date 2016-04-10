@@ -1,5 +1,7 @@
 module Toolbox.Types (..) where
 
+import Dict
+
 
 type alias Ingredient =
   { name : String
@@ -10,15 +12,21 @@ type alias Ingredient =
   }
 
 
+type alias IngredientID =
+  Int
+
+
 type alias Response =
   { ingredients : List Ingredient
   }
 
 
 type alias Model =
-  { response : Maybe Response }
+  { ingredients : Dict.Dict IngredientID Ingredient
+  }
 
 
 initialModel : Model
 initialModel =
-  { response = Nothing }
+  { ingredients = Dict.empty
+  }
