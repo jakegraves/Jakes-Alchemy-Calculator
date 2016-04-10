@@ -1,6 +1,7 @@
 module Toolbox.Views (..) where
 
 import Dict
+import Set
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
@@ -26,7 +27,7 @@ view address model =
                         [ h4 [ class "card-title" ] [ text "Ingredients" ] ]
                     , div
                         [ class "list-group list-group-flush" ]
-                        (List.map (ingredientItem address) (Dict.toList model.ingredients))
+                        (List.map (ingredientItem model address) (Dict.toList model.ingredients))
                     ]
                 ]
             , div
@@ -41,10 +42,16 @@ view address model =
         [ text "Please wait..." ]
 
 
-ingredientItem : Signal.Address Action -> ( IngredientID, Ingredient ) -> Html
-ingredientItem address ( id, i ) =
+ingredientItem : Model -> Signal.Address Action -> ( IngredientID, Ingredient ) -> Html
+ingredientItem model address ( id, i ) =
   a
-    [ class "list-group-item", href "#", clickHandler address (SelectIngredient id) ]
+    [ if id `Set.member` model.selectedIds then
+        class "list-group-item active"
+      else
+        class "list-group-item"
+    , href "#"
+    , clickHandler address (SelectIngredient id)
+    ]
     [ img [ src i.image, width 32, height 32 ] []
     , text i.name
     ]
