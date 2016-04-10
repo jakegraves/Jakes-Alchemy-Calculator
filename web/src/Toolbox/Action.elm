@@ -1,6 +1,7 @@
 module Toolbox.Action (..) where
 
 import Dict
+import Set
 import Effects exposing (Effects)
 import Toolbox.Types exposing (Model, IngredientID, Response)
 
@@ -20,10 +21,22 @@ update action model =
       )
 
     SelectIngredient id ->
-      ( model, Effects.none )
+      ( { model | selectedIds = updateIds id model.selectedIds }
+      , Effects.none
+      )
 
     NoOp ->
       ( model, Effects.none )
+
+
+updateIds : IngredientID -> Set.Set IngredientID -> Set.Set IngredientID
+updateIds id selectedIds =
+  if Set.member id selectedIds then
+    Set.remove id selectedIds
+  else if Set.size selectedIds < 4 then
+    Set.insert id selectedIds
+  else
+    selectedIds
 
 
 enumerate : List a -> List ( Int, a )

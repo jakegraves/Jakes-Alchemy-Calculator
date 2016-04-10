@@ -44,7 +44,7 @@ view address model =
 ingredientItem : Signal.Address Action -> ( IngredientID, Ingredient ) -> Html
 ingredientItem address ( id, i ) =
   a
-    [ class "list-group-item", href "#", clickHandler address NoOp ]
+    [ class "list-group-item", href "#", clickHandler address (SelectIngredient id) ]
     [ img [ src i.image, width 32, height 32 ] []
     , text i.name
     ]
