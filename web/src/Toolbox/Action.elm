@@ -2,11 +2,12 @@ module Toolbox.Action (..) where
 
 import Dict
 import Effects exposing (Effects)
-import Toolbox.Types exposing (Model, Response)
+import Toolbox.Types exposing (Model, IngredientID, Response)
 
 
 type Action
   = DownloadedIngredients (Maybe Response)
+  | SelectIngredient IngredientID
   | NoOp
 
 
@@ -17,6 +18,9 @@ update action model =
       ( responseToModel model maybeResponse
       , Effects.none
       )
+
+    SelectIngredient id ->
+      ( model, Effects.none )
 
     NoOp ->
       ( model, Effects.none )
