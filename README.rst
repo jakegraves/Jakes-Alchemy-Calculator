@@ -2,6 +2,12 @@
 skyrim-alchemy-toolbox
 ======================
 
+.. image:: https://david-dm.org/zsiciarz/skyrim-alchemy-toolbox.svg
+     :target: https://david-dm.org/zsiciarz/skyrim-alchemy-toolbox
+
+.. image:: https://david-dm.org/zsiciarz/skyrim-alchemy-toolbox/dev-status.svg
+     :target: https://david-dm.org/zsiciarz/skyrim-alchemy-toolbox#info=devDependencies
+
 Elm web app to calculate Skyrim alchemy recipes. Work in progress.
 
 Author
