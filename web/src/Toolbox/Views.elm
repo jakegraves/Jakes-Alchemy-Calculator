@@ -32,7 +32,7 @@ view address model =
             , div
                 [ class "col-sm-8" ]
                 [ h2 [] [ text "Recipe (TODO)" ]
-                , ul [] (selectedEffects model |> List.map text)
+                , ul [] (selectedEffects model |> List.map effectItem)
                 ]
             ]
         ]
@@ -56,6 +56,11 @@ ingredientItem model address ( id, i ) =
     [ img [ src i.image, width 32, height 32 ] []
     , text i.name
     ]
+
+
+effectItem : String -> Html
+effectItem effect =
+  ul [] [ text effect ]
 
 
 clickHandler address action =
