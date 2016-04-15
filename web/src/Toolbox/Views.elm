@@ -26,7 +26,7 @@ view address model =
                         [ h4 [ class "card-title" ] [ text "Ingredients" ] ]
                     , div
                         [ class "list-group list-group-flush" ]
-                        (List.map (ingredientItem model address) (Dict.toList model.ingredients))
+                        (model.ingredients |> Dict.toList |> List.map (ingredientItem model address))
                     ]
                 ]
             , div
