@@ -42,7 +42,7 @@ isSelected id model =
 
 selectedEffects : Model -> List String
 selectedEffects model =
-  Dict.filter (\id _ -> id `Set.member` model.selectedIds) model.ingredients
+  Dict.filter (\id _ -> id `isSelected` model) model.ingredients
     |> Dict.values
     |> List.map (.effects)
     |> List.concat
