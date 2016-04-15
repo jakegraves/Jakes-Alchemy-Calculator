@@ -7,7 +7,7 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Json.Decode
 import Toolbox.Action exposing (Action(..))
-import Toolbox.Types exposing (Ingredient, IngredientID, Model)
+import Toolbox.Types exposing (Ingredient, IngredientID, Model, selectedEffects)
 
 
 view : Signal.Address Action -> Model -> Html
@@ -32,7 +32,9 @@ view address model =
                 ]
             , div
                 [ class "col-sm-8" ]
-                [ h2 [] [ text "Recipe (TODO)" ] ]
+                [ h2 [] [ text "Recipe (TODO)" ]
+                , ul [] (selectedEffects model |> Set.toList |> List.map text)
+                ]
             ]
         ]
 
