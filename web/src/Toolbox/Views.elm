@@ -33,7 +33,7 @@ view address model =
             , div
                 [ class "col-sm-8" ]
                 [ h2 [] [ text "Recipe (TODO)" ]
-                , ul [] (selectedEffects model |> Set.toList |> List.map text)
+                , ul [] (selectedEffects model |> List.map text)
                 ]
             ]
         ]

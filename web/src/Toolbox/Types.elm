@@ -35,10 +35,11 @@ initialModel =
   }
 
 
-selectedEffects : Model -> Set.Set String
+selectedEffects : Model -> List String
 selectedEffects model =
   Dict.filter (\id _ -> id `Set.member` model.selectedIds) model.ingredients
     |> Dict.values
     |> List.map (.effects)
     |> List.concat
     |> Set.fromList
+    |> Set.toList
