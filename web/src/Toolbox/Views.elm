@@ -1,13 +1,12 @@
 module Toolbox.Views (..) where
 
 import Dict
-import Set
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Json.Decode
 import Toolbox.Action exposing (Action(..))
-import Toolbox.Types exposing (Ingredient, IngredientID, Model, selectedEffects)
+import Toolbox.Types exposing (Ingredient, IngredientID, Model, isSelected, selectedEffects)
 
 
 view : Signal.Address Action -> Model -> Html
@@ -47,7 +46,7 @@ view address model =
 ingredientItem : Model -> Signal.Address Action -> ( IngredientID, Ingredient ) -> Html
 ingredientItem model address ( id, i ) =
   a
-    [ if id `Set.member` model.selectedIds then
+    [ if id `isSelected` model then
         class "list-group-item active"
       else
         class "list-group-item"

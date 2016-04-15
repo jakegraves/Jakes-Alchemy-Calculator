@@ -35,6 +35,11 @@ initialModel =
   }
 
 
+isSelected : IngredientID -> Model -> Bool
+isSelected id model =
+  id `Set.member` model.selectedIds
+
+
 selectedEffects : Model -> List String
 selectedEffects model =
   Dict.filter (\id _ -> id `Set.member` model.selectedIds) model.ingredients
