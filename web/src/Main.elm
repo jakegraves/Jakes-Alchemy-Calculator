@@ -1,36 +1,24 @@
-module Main (..) where
+module Main exposing (..)
 
-import Effects exposing (Effects, Never)
+import Html.App as Html
 import Http
-import StartApp
 import Task
-import Toolbox.Action exposing (Action(..), update)
 import Toolbox.Decoders exposing (response)
 import Toolbox.Types exposing (Model, initialModel)
+import Toolbox.Update exposing (Msg(..), update)
 import Toolbox.Views exposing (view)
 
 
-downloadIngredients : Effects Action
+downloadIngredients : Cmd Msg
 downloadIngredients =
-  Http.get response "/api/"
-    |> Task.toMaybe
-    |> Task.map DownloadedIngredients
-    |> Effects.task
-
-
-app =
-  StartApp.start
-    { init = ( initialModel, downloadIngredients )
-    , update = update
-    , view = view
-    , inputs = []
-    }
+    Http.get response "/api/"
+        |> Task.perform DownloadFailed DownloadedIngredients
 
 
 main =
-  app.html
-
-
-port tasks : Signal (Task.Task Never ())
-port tasks =
-  app.tasks
+    Html.program
+        { init = ( initialModel, downloadIngredients )
+        , update = update
+        , view = view
+        , subscriptions = \_ -> Sub.none
+        }

@@ -1,21 +1,20 @@
-module Toolbox.Decoders (..) where
+module Toolbox.Decoders exposing (..)
 
-import Json.Decode exposing ((:=), Decoder, string, int, float, list, succeed)
-import Json.Decode.Extra exposing ((|:))
+import Json.Decode exposing ((:=), Decoder, string, int, float, list, object1, object5)
 import Toolbox.Types exposing (Ingredient, Response)
 
 
 ingredient : Decoder Ingredient
 ingredient =
-  succeed Ingredient
-    |: ("name" := string)
-    |: ("value" := int)
-    |: ("weight" := float)
-    |: ("image" := string)
-    |: ("effects" := list string)
+    object5 Ingredient
+        ("name" := string)
+        ("value" := int)
+        ("weight" := float)
+        ("image" := string)
+        ("effects" := list string)
 
 
 response : Decoder Response
 response =
-  succeed Response
-    |: ("ingredients" := list ingredient)
+    object1 Response
+        ("ingredients" := list ingredient)
