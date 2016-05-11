@@ -1,3 +1,3 @@
 var Elm = require('./Main.elm');
 
-Elm.embed(Elm.Main, document.getElementById('app'));
+Elm.Main.embed(document.getElementById('app'));
