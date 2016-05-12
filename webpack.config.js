@@ -14,7 +14,7 @@ module.exports = {
         loaders: [{
             test: /\.elm$/,
             exclude: [/elm-stuff/, /node_modules/],
-            loader: 'no-export-loader!elm-webpack'
+            loader: 'elm-webpack'
         }, {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract("style-loader", "css-loader")
