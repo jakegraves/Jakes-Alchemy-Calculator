@@ -38,7 +38,7 @@ updateIds : IngredientID -> Set.Set IngredientID -> Set.Set IngredientID
 updateIds id selectedIds =
     if Set.member id selectedIds then
         Set.remove id selectedIds
-    else if Set.size selectedIds < 4 then
+    else if Set.size selectedIds < 3 then
         Set.insert id selectedIds
     else
         selectedIds
