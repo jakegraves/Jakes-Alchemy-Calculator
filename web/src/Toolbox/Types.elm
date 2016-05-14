@@ -2,6 +2,7 @@ module Toolbox.Types exposing (..)
 
 import Dict
 import Set
+import List.Extra exposing (group)
 
 
 type alias Ingredient =
@@ -40,11 +41,18 @@ isSelected id model =
     id `Set.member` model.selectedIds
 
 
-selectedEffects : Model -> List String
-selectedEffects model =
+commonEffects : Model -> List String
+commonEffects model =
     Dict.filter (\id _ -> id `isSelected` model) model.ingredients
         |> Dict.values
         |> List.map (.effects)
         |> List.concat
-        |> Set.fromList
-        |> Set.toList
+        |> List.sort
+        |> group
+        |> List.filterMap
+            (\sublist ->
+                if List.length sublist > 1 then
+                    List.head sublist
+                else
+                    Nothing
+            )

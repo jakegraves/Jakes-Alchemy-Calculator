@@ -6,7 +6,7 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Json.Decode
 import Toolbox.Update exposing (Msg(..))
-import Toolbox.Types exposing (Ingredient, IngredientID, Model, isSelected, selectedEffects)
+import Toolbox.Types exposing (Ingredient, IngredientID, Model, isSelected, commonEffects)
 
 
 view : Model -> Html Msg
@@ -25,7 +25,7 @@ view model =
                         ]
                     , div [ class "col-sm-8" ]
                         [ h2 [] [ text "Recipe (TODO)" ]
-                        , ul [] (selectedEffects model |> List.map effectItem)
+                        , ul [] (commonEffects model |> List.map effectItem)
                         ]
                     ]
                 ]
