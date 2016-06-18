@@ -52,7 +52,7 @@ ingredientItem model ( id, i ) =
 
 effectItem : String -> Html Msg
 effectItem effect =
-    ul [] [ text effect ]
+    li [] [ text effect ]
 
 
 clickHandler msg =
