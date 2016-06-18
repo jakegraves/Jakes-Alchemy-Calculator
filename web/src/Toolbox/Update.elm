@@ -17,21 +17,17 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update action model =
     case action of
         DownloadedIngredients maybeResponse ->
-            ( responseToModel model maybeResponse
-            , Cmd.none
-            )
+            responseToModel model maybeResponse ! []
 
         -- TODO: handle HTTP errors
         DownloadFailed _ ->
-            ( model, Cmd.none )
+            model ! []
 
         SelectIngredient id ->
-            ( { model | selectedIds = updateIds id model.selectedIds }
-            , Cmd.none
-            )
+            { model | selectedIds = updateIds id model.selectedIds } ! []
 
         NoOp ->
-            ( model, Cmd.none )
+            model ! []
 
 
 updateIds : IngredientID -> Set.Set IngredientID -> Set.Set IngredientID
