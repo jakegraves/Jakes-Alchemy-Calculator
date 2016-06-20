@@ -9,7 +9,8 @@ import Toolbox.Types exposing (Model, IngredientID, Response)
 type Msg
     = DownloadedIngredients Response
     | DownloadFailed Http.Error
-    | SelectIngredient IngredientID
+    | AddIngredient IngredientID
+    | RemoveIngredient IngredientID
     | NoOp
 
 
@@ -23,21 +24,21 @@ update action model =
         DownloadFailed _ ->
             model ! []
 
-        SelectIngredient id ->
-            { model | selectedIds = updateIds id model.selectedIds } ! []
+        AddIngredient id ->
+            { model
+                | selectedIds =
+                    if Set.size model.selectedIds < 3 then
+                        Set.insert id model.selectedIds
+                    else
+                        model.selectedIds
+            }
+                ! []
+
+        RemoveIngredient id ->
+            { model | selectedIds = Set.remove id model.selectedIds } ! []
 
         NoOp ->
             model ! []
-
-
-updateIds : IngredientID -> Set.Set IngredientID -> Set.Set IngredientID
-updateIds id selectedIds =
-    if Set.member id selectedIds then
-        Set.remove id selectedIds
-    else if Set.size selectedIds < 3 then
-        Set.insert id selectedIds
-    else
-        selectedIds
 
 
 enumerate : List a -> List ( Int, a )

@@ -43,7 +43,12 @@ ingredientItem model ( id, i ) =
           else
             class "list-group-item"
         , href "#"
-        , clickHandler (SelectIngredient id)
+        , clickHandler
+            (if id `isSelected` model then
+                RemoveIngredient id
+             else
+                AddIngredient id
+            )
         ]
         [ img [ src i.image, width 32, height 32 ] []
         , text i.name
