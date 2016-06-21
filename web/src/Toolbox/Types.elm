@@ -23,9 +23,14 @@ type alias Response =
     }
 
 
+type alias Recipe =
+    { effects : Dict.Dict String Int }
+
+
 type alias Model =
     { ingredients : Dict.Dict IngredientID Ingredient
     , selectedIds : Set.Set IngredientID
+    , recipe : Recipe
     }
 
 
@@ -33,6 +38,7 @@ initialModel : Model
 initialModel =
     { ingredients = Dict.empty
     , selectedIds = Set.empty
+    , recipe = { effects = Dict.empty }
     }
 
 
