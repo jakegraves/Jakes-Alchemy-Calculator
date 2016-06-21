@@ -30,7 +30,7 @@ update action model =
                 , recipe =
                     case Dict.get id model.ingredients of
                         Just ingredient ->
-                            Debug.log "recipe add" (addIngredient model.recipe ingredient)
+                            addIngredient model.recipe ingredient
 
                         Nothing ->
                             model.recipe
@@ -43,7 +43,7 @@ update action model =
                 , recipe =
                     case Dict.get id model.ingredients of
                         Just ingredient ->
-                            Debug.log "recipe remove" (removeIngredient model.recipe ingredient)
+                            removeIngredient model.recipe ingredient
 
                         Nothing ->
                             model.recipe
