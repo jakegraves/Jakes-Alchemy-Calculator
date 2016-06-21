@@ -25,8 +25,10 @@ view model =
                             ]
                         ]
                     , div [ class "col-sm-8" ]
-                        [ h2 [] [ text "Recipe (TODO)" ]
-                        , ul [] (commonEffects model.recipe |> List.map effectItem)
+                        [ div [ style [ ( "position", "fixed" ) ] ]
+                            [ h2 [] [ text "Recipe" ]
+                            , ul [] (commonEffects model.recipe |> List.map effectItem)
+                            ]
                         ]
                     ]
                 ]
