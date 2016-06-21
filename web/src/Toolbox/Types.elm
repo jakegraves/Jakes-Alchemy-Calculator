@@ -2,7 +2,6 @@ module Toolbox.Types exposing (..)
 
 import Dict
 import Set
-import List.Extra exposing (group)
 
 
 type alias Ingredient =
