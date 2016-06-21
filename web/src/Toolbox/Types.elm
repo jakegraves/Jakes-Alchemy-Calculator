@@ -90,18 +90,7 @@ isSelected id model =
     id `Set.member` model.selectedIds
 
 
-commonEffects : Model -> List String
-commonEffects model =
-    Dict.filter (\id _ -> id `isSelected` model) model.ingredients
-        |> Dict.values
-        |> List.map (.effects)
-        |> List.concat
-        |> List.sort
-        |> group
-        |> List.filterMap
-            (\sublist ->
-                if List.length sublist > 1 then
-                    List.head sublist
-                else
-                    Nothing
-            )
+commonEffects : Recipe -> List String
+commonEffects recipe =
+    Dict.filter (\_ count -> count > 1) recipe.effects
+        |> Dict.keys
