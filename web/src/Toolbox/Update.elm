@@ -26,11 +26,7 @@ update action model =
 
         AddIngredient id ->
             { model
-                | selectedIds =
-                    if Set.size model.selectedIds < 3 then
-                        Set.insert id model.selectedIds
-                    else
-                        model.selectedIds
+                | selectedIds = Set.insert id model.selectedIds
             }
                 ! []
 

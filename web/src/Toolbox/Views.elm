@@ -5,6 +5,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Json.Decode
+import Set
 import Toolbox.Update exposing (Msg(..))
 import Toolbox.Types exposing (Ingredient, IngredientID, Model, isSelected, commonEffects)
 
@@ -46,8 +47,10 @@ ingredientItem model ( id, i ) =
         , clickHandler
             (if id `isSelected` model then
                 RemoveIngredient id
-             else
+             else if Set.size model.selectedIds < 3 then
                 AddIngredient id
+             else
+                NoOp
             )
         ]
         [ img [ src i.image, width 32, height 32 ] []
