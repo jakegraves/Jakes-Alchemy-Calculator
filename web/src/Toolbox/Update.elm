@@ -3,7 +3,7 @@ module Toolbox.Update exposing (..)
 import Dict
 import Http
 import Set
-import Toolbox.Types exposing (Model, IngredientID, Response)
+import Toolbox.Types exposing (Model, IngredientID, Response, addIngredient, removeIngredient)
 
 
 type Msg
@@ -27,11 +27,28 @@ update action model =
         AddIngredient id ->
             { model
                 | selectedIds = Set.insert id model.selectedIds
+                , recipe =
+                    case Dict.get id model.ingredients of
+                        Just ingredient ->
+                            Debug.log "recipe add" (addIngredient model.recipe ingredient)
+
+                        Nothing ->
+                            model.recipe
             }
                 ! []
 
         RemoveIngredient id ->
-            { model | selectedIds = Set.remove id model.selectedIds } ! []
+            { model
+                | selectedIds = Set.remove id model.selectedIds
+                , recipe =
+                    case Dict.get id model.ingredients of
+                        Just ingredient ->
+                            Debug.log "recipe remove" (removeIngredient model.recipe ingredient)
+
+                        Nothing ->
+                            model.recipe
+            }
+                ! []
 
         NoOp ->
             model ! []
