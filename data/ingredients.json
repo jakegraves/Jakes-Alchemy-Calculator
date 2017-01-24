@@ -1,6 +1,7 @@
 {
   "ingredients": [
     {
+      "Id": 0,
       "name": "Abecean Longfin",
       "effects": [
         "Weakness to Frost",
@@ -13,6 +14,7 @@
       "weight": 0.5
     },
     {
+      "Id": 1,
       "name": "Ancestor Moth Wing",
       "effects": [
         "Damage Stamina, Fortify Conjuration, Damage Magicka Regen, Fortify Enchanting"
@@ -22,6 +24,7 @@
       "weight": 0.1
     },
     {
+      "Id": 2,
       "name": "Ash Creep Cluster",
       "effects": [
         "Damage Stamina",
@@ -34,6 +37,7 @@
       "weight": 0.25
     },
     {
+      "Id": 3,
       "name": "Ash Hopper Jelly",
       "effects": [
         "Restore Health",
@@ -46,6 +50,7 @@
       "weight": 0.3
     },
     {
+      "Id": 4,
       "effects": [
         "Resist Fire	Weakness to Shock	Fortify Lockpicking	Fortify Sneak"
       ],
@@ -55,6 +60,7 @@
       "weight": 0.1
     },
     {
+      "Id": 5,
       "name": "Bear Claws",
       "effects": [
         "Restore Stamina",
@@ -67,6 +73,7 @@
       "weight": 0.1
     },
     {
+      "Id": 6,
       "name": "Bee",
       "effects": [
         "Restore Stamina",
@@ -79,6 +86,7 @@
       "weight": 0.1
     },
     {
+      "Id": 7,
       "name": "Beehive Husk",
       "effects": [
         "Resist Poison",
@@ -91,6 +99,7 @@
       "weight": 1.0
     },
     {
+      "Id": 8,
       "name": "Berit's Ashes",
       "effects": [
         "Damage Stamina",
@@ -103,6 +112,7 @@
       "weight": 0.5
     },
     {
+      "Id": 9,
       "effects": [
         "Weakness to Fire",
         "Fortify Block",
@@ -115,6 +125,7 @@
       "weight": 0.3
     },
     {
+      "Id": 10,
       "effects": [
         "Damage Stamina",
         "Frenzy",
@@ -127,6 +138,7 @@
       "weight": 0.2
     },
     {
+      "Id": 11,
       "effects": [
         "Damage Stamina",
         "Fortify Conjuration",
@@ -139,6 +151,7 @@
       "weight": 0.1
     },
     {
+      "Id": 12,
       "effects": [
         "Resist Shock",
         "Fortify Pickpocket",
@@ -151,6 +164,7 @@
       "weight": 0.1
     },
     {
+      "Id": 13,
       "effects": [
         "Restore Health",
         "Fortify Conjuration",
@@ -163,6 +177,7 @@
       "weight": 0.1
     },
     {
+      "Id": 14,
       "effects": [
         "Fortify Stamina", "Fortify Health", "Fortify Block", "Frenzy"
       ],
@@ -172,6 +187,7 @@
       "weight": 0.5
     },
     {
+      "Id": 15,
       "effects": [
         "Damage Stamina",
         "Resist Fire",
@@ -184,6 +200,7 @@
       "weight": 0.5
     },
     {
+      "Id": 16,
       "effects": [
         "Restore Magicka",
         "Fortify Block",
@@ -196,6 +213,7 @@
       "weight": 0.5
     },
     {
+      "Id": 17,
       "effects": [
         "Weakness to Fire	Fortify Alteration	Damage Magicka Regen	Slow"
       ],
@@ -205,6 +223,7 @@
       "weight": 0.5
     },
     {
+      "Id": 18,
       "effects": [
         "Restore Health",
         "Fortify Barter",
@@ -217,6 +236,7 @@
       "weight": 0.1
     },
     {
+      "Id": 19,
       "effects": [
         "Damage Stamina",
         "Fortify One-handed",
@@ -229,6 +249,7 @@
       "weight": 0.1
     },
     {
+      "Id": 20,
       "effects": [
         "Restore Stamina",
         "Cure Disease",
@@ -241,6 +262,7 @@
       "weight": 0.5
     },
     {
+      "Id": 21,
       "effects": [
         "Weakness to Poison",
         "Fortify Stamina",
@@ -253,6 +275,7 @@
       "weight": 0.2
     },
     {
+      "Id": 22,
       "name": "Chaurus Hunter Antennae",
       "effects": [
         "Damage Stamina",
@@ -265,6 +288,7 @@
       "weight": 0.1
     },
     {
+      "Id": 23,
       "effects": [
         "Resist Magic",
         "Damage Magicka Regen",
@@ -277,6 +301,7 @@
       "weight": 0.5
     },
     {
+      "Id": 24,
       "effects": [
         "Restore Magicka",
         "Damage Stamina Regen",
@@ -289,6 +314,7 @@
       "weight": 0.2
     },
     {
+      "Id": 25,
       "effects": [
         "Damage Health",
         "Damage Stamina",
@@ -301,6 +327,7 @@
       "weight": 0.2
     },
     {
+      "Id": 26,
       "effects": [
         "Damage Stamina",
         "Fortify Restoration",
@@ -313,6 +340,7 @@
       "weight": 0.25
     },
     {
+      "Id": 27,
       "effects": [
         "Restore Health",
         "Damage Stamina Regen",
@@ -325,6 +353,7 @@
       "weight": 0.5
     },
     {
+      "Id": 28,
       "effects": [
         "Damage Health",
         "Ravage Stamina",
@@ -337,6 +366,7 @@
       "weight": 0.1
     },
     {
+      "Id": 29,
       "effects": [
         "Resist Fire",
         "Fortify Barter",
@@ -349,6 +379,7 @@
       "weight": 0.1
     },
     {
+      "Id": 30,
       "effects": [
         "Weakness to Magic",
         "Fortify Illusion",
@@ -361,6 +392,7 @@
       "weight": 0.25
     },
     {
+      "Id": 31,
       "effects": [
         "Restore Magicka",
         "Fortify Destruction",
@@ -373,6 +405,7 @@
       "weight": 0.1
     },
     {
+      "Id": 32,
       "effects": [
         "Restore Magicka",
         "Fortify Marksman",
@@ -385,6 +418,7 @@
       "weight": 0.1
     },
     {
+      "Id": 33,
       "effects": [
         "Damage Health	Fortify Magicka	Regenerate Health	Fortify Two-Handed"
       ],
@@ -394,6 +428,7 @@
       "weight": 0.3
     },
     {
+      "Id": 34,
       "effects": [
         "Restore Stamina",
         "Ravage Health",
@@ -406,6 +441,7 @@
       "weight": 0.1
     },
     {
+      "Id": 35,
       "effects": [
         "Damage Health",
         "Frenzy",
@@ -418,6 +454,7 @@
       "weight": 0.2
     },
     {
+      "Id": 36,
       "effects": [
         "Restore Health	Fortify Light Armor	Cure Disease	Resist Magic"
       ],
@@ -427,6 +464,7 @@
       "weight": 0.1
     },
     {
+      "Id": 37,
       "effects": [
         "Weakness to Frost",
         "Resist Fire",
@@ -439,6 +477,7 @@
       "weight": 0.25
     },
     {
+      "Id": 38,
       "effects": [
         "Resist Fire",
         "Fortify Two-handed",
@@ -451,6 +490,7 @@
       "weight": 0.1
     },
     {
+      "Id": 39,
       "effects": [
         "Resist Frost",
         "Fortify Sneak",
@@ -463,6 +503,7 @@
       "weight": 0.1
     },
     {
+      "Id": 40,
       "effects": [
         "Weakness to Fire",
         "Resist Frost",
@@ -475,6 +516,7 @@
       "weight": 0.25
     },
     {
+      "Id": 41,
       "effects": [
         "Resist Poison",
         "Fortify Stamina",
@@ -487,6 +529,7 @@
       "weight": 0.25
     },
     {
+      "Id": 42,
       "effects": [
         "Weakness to Shock",
         "Ravage Health",
@@ -499,6 +542,7 @@
       "weight": 0.25
     },
     {
+      "Id": 43,
       "effects": [
         "Damage Stamina",
         "Fortify Health",
@@ -511,6 +555,7 @@
       "weight": 1.0
     },
     {
+      "Id": 44,
       "name": "Gleamblossom",
       "effects": [
         "Resist Magic, Fear, Regenerate Health, Paralysis"
@@ -520,6 +565,7 @@
       "weight": 0.1
     },
     {
+      "Id": 45,
       "effects": [
         "Damage Magicka",
         "Damage Magicka Regen",
@@ -532,6 +578,7 @@
       "weight": 0.5
     },
     {
+      "Id": 46,
       "effects": [
         "Resist Shock",
         "Fortify Destruction",
@@ -544,6 +591,7 @@
       "weight": 0.2
     },
     {
+      "Id": 47,
       "effects": [
         "Resist Poison",
         "Ravage Magicka",
@@ -556,6 +604,7 @@
       "weight": 0.1
     },
     {
+      "Id": 48,
       "effects": [
         "Resist Magic",
         "Lingering Damage Magicka",
@@ -568,6 +617,7 @@
       "weight": 0.25
     },
     {
+      "Id": 49,
       "effects": [
         "Damage Magicka",
         "Fortify Conjuration",
@@ -580,6 +630,7 @@
       "weight": 0.1
     },
     {
+      "Id": 50,
       "effects": [
         "Damage Magicka",
         "Fortify Health",
@@ -592,6 +643,7 @@
       "weight": 0.25
     },
     {
+      "Id": 51,
       "effects": [
         "Restore Stamina",
         "Resist Frost",
@@ -604,6 +656,7 @@
       "weight": 0.25
     },
     {
+      "Id": 52,
       "effects": [
         "Cure Disease",
         "Fortify Light Armor",
@@ -616,6 +669,7 @@
       "weight": 0.1
     },
     {
+      "Id": 53,
       "effects": [
         "Resist Magic",
         "Damage Magicka Regen",
@@ -628,6 +682,7 @@
       "weight": 0.5
     },
     {
+      "Id": 54,
       "effects": [
         "Restore Stamina",
         "Fortify Magicka",
@@ -640,6 +695,7 @@
       "weight": 0.25
     },
     {
+      "Id": 55,
       "effects": [
         "Restore Stamina",
         "Fortify Block",
@@ -652,6 +708,7 @@
       "weight": 1.0
     },
     {
+      "Id": 56,
       "effects": [
         "Damage Health",
         "Paralysis",
@@ -664,6 +721,7 @@
       "weight": 0.25
     },
     {
+      "Id": 57,
       "effects": [
         "Damage Health",
         "Damage Magicka",
@@ -676,6 +734,7 @@
       "weight": 1.0
     },
     {
+      "Id": 58,
       "effects": [
         "Weakness to Frost",
         "Fortify Heavy Armor",
@@ -688,6 +747,7 @@
       "weight": 0.25
     },
     {
+      "Id": 59,
       "effects": [
         "Damage Health",
         "Lingering Damage Health",
@@ -700,6 +760,7 @@
       "weight": 0.3
     },
     {
+      "Id": 60,
       "effects": [
         "Weakness to Magic",
         "Fortify Magicka",
@@ -712,6 +773,7 @@
       "weight": 0.2
     },
     {
+      "Id": 61,
       "effects": [
         "Weakness to Fire",
         "Fortify Marksman",
@@ -724,6 +786,7 @@
       "weight": 0.1
     },
     {
+      "Id": 62,
       "effects": [
         "Restore Stamina",
         "Fortify Stamina",
@@ -736,6 +799,7 @@
       "weight": 0.1
     },
     {
+      "Id": 63,
       "effects": [
         "Resist Magic",
         "Fortify Stamina",
@@ -748,6 +812,7 @@
       "weight": 0.1
     },
     {
+      "Id": 64,
       "effects": [
         "Damage Magicka",
         "Fortify Light Armor",
@@ -760,6 +825,7 @@
       "weight": 0.1
     },
     {
+      "Id": 65,
       "effects": [
         "Weakness to Fire",
         "Resist Frost",
@@ -772,6 +838,7 @@
       "weight": 0.25
     },
     {
+      "Id": 66,
       "effects": [
         "Restore Magicka",
         "Lingering Damage Health",
@@ -784,6 +851,7 @@
       "weight": 0.25
     },
     {
+      "Id": 67,
       "effects": [
         "Restore Stamina",
         "Cure Disease",
@@ -796,6 +864,7 @@
       "weight": 0.25
     },
     {
+      "Id": 68,
       "effects": [
         "Damage Magicka",
         "Fortify Lockpicking",
@@ -808,6 +877,7 @@
       "weight": 0.25
     },
     {
+      "Id": 69,
       "effects": [
         "Paralysis	Fortify Carry Weight	Restore Stamina	Fear"
       ],
@@ -817,6 +887,7 @@
       "weight": 0.5
     },
     {
+      "Id": 70,
       "effects": [
         "Damage Health",
         "Damage Magicka Regen",
@@ -829,6 +900,7 @@
       "weight": 0.1
     },
     {
+      "Id": 71,
       "effects": [
         "Damage Health",
         "Damage Stamina",
@@ -841,6 +913,7 @@
       "weight": 0.2
     },
     {
+      "Id": 72,
       "effects": [
         "Damage Magicka",
         "Waterbreathing",
@@ -853,6 +926,7 @@
       "weight": 0.2
     },
     {
+      "Id": 73,
       "effects": [
         "Restore Stamina",
         "Ravage Magicka",
@@ -865,6 +939,7 @@
       "weight": 0.1
     },
     {
+      "Id": 74,
       "effects": [
         "Restore Stamina",
         "Fortify Block",
@@ -877,6 +952,7 @@
       "weight": 0.1
     },
     {
+      "Id": 75,
       "effects": [
         "Restore Stamina",
         "Fortify Lockpicking",
@@ -889,6 +965,7 @@
       "weight": 0.5
     },
     {
+      "Id": 76,
       "name": "Poison Bloom",
       "effects": [
         "Damage Health, Slow, Fortify Carry Weight, Fear"
@@ -898,6 +975,7 @@
       "weight": 0.3
     },
     {
+      "Id": 77,
       "effects": [
         "Restore Stamina",
         "Fortify Sneak",
@@ -910,6 +988,7 @@
       "weight": 0.1
     },
     {
+      "Id": 78,
       "effects": [
         "Restore Stamina",
         "Fortify Sneak",
@@ -922,6 +1001,7 @@
       "weight": 0.1
     },
     {
+      "Id": 79,
       "effects": [
         "Restore Magicka",
         "Ravage Magicka",
@@ -934,6 +1014,7 @@
       "weight": 0.1
     },
     {
+      "Id": 80,
       "effects": [
         "Damage Health",
         "Fortify Alteration",
@@ -946,6 +1027,7 @@
       "weight": 0.25
     },
     {
+      "Id": 81,
       "effects": [
         "Restore Health",
         "Fortify One-handed",
@@ -958,6 +1040,7 @@
       "weight": 0.5
     },
     {
+      "Id": 82,
       "effects": [
         "Restore Stamina",
         "Fortify Heavy Armor",
@@ -970,6 +1053,7 @@
       "weight": 0.1
     },
     {
+      "Id": 83,
       "effects": [
         "Restore Stamina",
         "Waterbreathing (15.4×Value)",
@@ -982,6 +1066,7 @@
       "weight": 0.2
     },
     {
+      "Id": 84,
       "effects": [
         "Weakness to Magic",
         "Fortify Restoration",
@@ -994,6 +1079,7 @@
       "weight": 0.2
     },
     {
+      "Id": 85,
       "effects": [
         "Weakness to Magic",
         "Fortify Illusion",
@@ -1006,6 +1092,7 @@
       "weight": 0.25
     },
     {
+      "Id": 86,
       "effects": [
         "Ravage Health	Ravage Stamina	Ravage Magicka	Lingering Damage Health"
       ],
@@ -1015,6 +1102,7 @@
       "weight": 0.1
     },
     {
+      "Id": 87,
       "effects": [
         "Restore Stamina",
         "Damage Stamina Regen",
@@ -1027,6 +1115,7 @@
       "weight": 0.25
     },
     {
+      "Id": 88,
       "effects": [
         "Damage Stamina Regen",
         "Ravage Health",
@@ -1039,6 +1128,7 @@
       "weight": 0.2
     },
     {
+      "Id": 89,
       "effects": [
         "Resist Poison",
         "Fortify Pickpocket",
@@ -1051,6 +1141,7 @@
       "weight": 0.2
     },
     {
+      "Id": 90,
       "effects": [
         "Resist Frost",
         "Lingering Damage Health",
@@ -1063,6 +1154,7 @@
       "weight": 0.1
     },
     {
+      "Id": 91,
       "effects": [
         "Weakness to Poison",
         "Fortify Restoration",
@@ -1075,6 +1167,7 @@
       "weight": 0.1
     },
     {
+      "Id": 92,
       "effects": [
         "Restore Stamina",
         "Fortify One-handed",
@@ -1087,6 +1180,7 @@
       "weight": 0.1
     },
     {
+      "Id": 93,
       "effects": [
         "Resist Fire",
         "Fortify Enchanting",
@@ -1099,6 +1193,7 @@
       "weight": 0.1
     },
     {
+      "Id": 94,
       "effects": [
         "Ravage Stamina	Resist Fire	Fortify Enchanting	Ravage Magicka"
       ],
@@ -1108,6 +1203,7 @@
       "weight": 0.1
     },
     {
+      "Id": 95,
       "effects": [
         "Damage Stamina",
         "Damage Magicka Regen",
@@ -1120,6 +1216,7 @@
       "weight": 0.2
     },
     {
+      "Id": 96,
       "effects": [
         "Damage Magicka Regen",
         "Fortify Enchanting",
@@ -1132,6 +1229,7 @@
       "weight": 0.2
     },
     {
+      "Id": 97,
       "effects": [
         "Resist Shock",
         "Lingering Damage Magicka",
@@ -1144,6 +1242,7 @@
       "weight": 0.25
     },
     {
+      "Id": 98,
       "effects": [
         "Weakness to Magic",
         "Fortify Illusion",
@@ -1156,6 +1255,7 @@
       "weight": 0.5
     },
     {
+      "Id": 99,
       "effects": [
         "Resist Frost",
         "Ravage Stamina",
@@ -1168,6 +1268,7 @@
       "weight": 0.1
     },
     {
+      "Id": 100,
       "effects": [
         "Restore Stamina",
         "Lingering Damage Magicka",
@@ -1180,6 +1281,7 @@
       "weight": 0.1
     },
     {
+      "Id": 101,
       "effects": [
         "Weakness to Shock	Fortify Carry Weight	Damage Magicka	Slow"
       ],
@@ -1189,6 +1291,7 @@
       "weight": 0.2
     },
     {
+      "Id": 102,
       "effects": [
         "Resist Poison",
         "Fortify Two-handed",
@@ -1201,6 +1304,7 @@
       "weight": 1.0
     },
     {
+      "Id": 103,
       "effects": [
         "Resist Magic",
         "Fortify Magicka",
@@ -1213,6 +1317,7 @@
       "weight": 0.1
     },
     {
+      "Id": 104,
       "effects": [
         "Invisibility",
         "Restore Magicka",
@@ -1225,6 +1330,7 @@
       "weight": 0.2
     },
     {
+      "Id": 105,
       "effects": [
         "Weakness to Shock",
         "Resist Magic",
@@ -1237,6 +1343,7 @@
       "weight": 0.2
     },
     {
+      "Id": 106,
       "effects": [
         "Restore Health",
         "Fortify Health",
@@ -1249,6 +1356,7 @@
       "weight": 0.1
     },
     {
+      "Id": 108,
       "effects": [
         "Weakness to Frost",
         "Fortify Heavy Armor",
@@ -1261,6 +1369,7 @@
       "weight": 0.3
     },
     {
+      "Id": 109,
       "effects": [
         "Restore Stamina",
         "Fortify Destruction",
@@ -1273,6 +1382,7 @@
       "weight": 0.1
     },
     {
+      "Id": 110,
       "name": "Yellow Mountain Flower",
       "effects": [
         "Resist Poison, Fortify Restoration, Fortify Health, Damage Stamina Regen"
