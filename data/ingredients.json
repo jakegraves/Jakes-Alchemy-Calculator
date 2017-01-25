@@ -17,7 +17,10 @@
       "Id": 1,
       "name": "Ancestor Moth Wing",
       "effects": [
-        "Damage Stamina, Fortify Conjuration, Damage Magicka Regen, Fortify Enchanting"
+        "Damage Stamina",
+        "Fortify Conjuration",
+        "Damage Magicka Regen",
+        "Fortify Enchanting"
       ],
       "image": "n/a",
       "value": 2,
@@ -52,7 +55,10 @@
     {
       "Id": 4,
       "effects": [
-        "Resist Fire	Weakness to Shock	Fortify Lockpicking	Fortify Sneak"
+        "Resist Fire",
+        "Weakness to Shock",
+        "Fortify Lockpicking",
+        "Fortify Sneak"
       ],
       "image": "n/a",
       "value": 1,
@@ -179,7 +185,10 @@
     {
       "Id": 14,
       "effects": [
-        "Fortify Stamina", "Fortify Health", "Fortify Block", "Frenzy"
+        "Fortify Stamina",
+        "Fortify Health",
+        "Fortify Block",
+        "Frenzy"
       ],
       "image": "",
       "value": 20,
@@ -215,7 +224,10 @@
     {
       "Id": 17,
       "effects": [
-        "Weakness to Fire	Fortify Alteration	Damage Magicka Regen	Slow"
+        "Weakness to Fire",
+        "Fortify Alteration",
+        "Damage Magicka Regen",
+        "Slow"
       ],
       "image": "",
       "value": 20,
@@ -420,7 +432,10 @@
     {
       "Id": 33,
       "effects": [
-        "Damage Health	Fortify Magicka	Regenerate Health	Fortify Two-Handed"
+        "Damage Health",
+        "Fortify Magicka",
+        "Regenerate Health",
+        "Fortify Two-Handed"
       ],
       "image": "",
       "value": 1,
@@ -456,7 +471,10 @@
     {
       "Id": 36,
       "effects": [
-        "Restore Health	Fortify Light Armor	Cure Disease	Resist Magic"
+        "Restore Health",
+        "Fortify Light Armor",
+        "Cure Disease",
+        "Resist Magic"
       ],
       "image": "",
       "value": 15,
@@ -558,7 +576,10 @@
       "Id": 44,
       "name": "Gleamblossom",
       "effects": [
-        "Resist Magic, Fear, Regenerate Health, Paralysis"
+        "Resist Magic",
+        "Fear",
+        "Regenerate Health",
+        "Paralysis"
       ],
       "image": "",
       "value": 5,
@@ -1195,7 +1216,10 @@
     {
       "Id": 94,
       "effects": [
-        "Ravage Stamina	Resist Fire	Fortify Enchanting	Ravage Magicka"
+        "Ravage Stamina",
+        "Resist Fire",
+        "Fortify Enchanting",
+        "Ravage Magicka"
       ],
       "image": "",
       "value": 20,
@@ -1283,7 +1307,10 @@
     {
       "Id": 101,
       "effects": [
-        "Weakness to Shock	Fortify Carry Weight	Damage Magicka	Slow"
+        "Weakness to Shock",
+        "Fortify Carry Weight",
+        "Damage Magicka",
+        "Slow"
       ],
       "image": "",
       "value": 1,
@@ -1385,7 +1412,10 @@
       "Id": 110,
       "name": "Yellow Mountain Flower",
       "effects": [
-        "Resist Poison, Fortify Restoration, Fortify Health, Damage Stamina Regen"
+        "Resist Poison",
+        "Fortify Restoration",
+        "Fortify Health",
+        "Damage Stamina Regen"
       ],
       "image": "",
       "value": 2,
