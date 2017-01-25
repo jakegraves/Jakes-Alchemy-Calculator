@@ -1,0 +1,533 @@
+// If IngredientMod dosen't exist, magnitude cannot be changed.
+{
+  "effects": [
+    {
+      "Id": 0,
+      "Name": "Cure Disease",
+      "IngredientMods": [
+        {"Id": 20, "Value": 0.36},
+        {"Id": 52, "Value": 0.36}
+      ],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 5,
+      "BaseDuration": 0,
+      "Value": 21
+    },
+    {
+      "Id": 1,
+      "Name": "Damage Health",
+      "IngredientMods": [
+        {"Id": 60, "Magnitude": 100},
+        {"Id": 81, "Magnitude": 2.5},
+        {"Id": 72, "Value": 12.6},
+        {"Id": 25, "Magnitude": 3},
+        {"Id": 28, "Magnitude": 1.5},
+        {"Id": 77, "Magnitude": 1.5}
+      ],
+      "BaseCost": 3,
+      "BaseMagnitude": 2,
+      "BaseDuration": 1,
+      "Value": 3
+    },
+    {
+      "Id": 2,
+      "Name": "Damage Magicka",
+      "IngredientMods": [],
+      "BaseCost": 2.2,
+      "BaseMagnitude": 2,
+      "BaseDuration": 0,
+      "Value": 52
+    },
+    {
+      "Id": 3,
+      "Name": "Damage Magicka Regen",
+      "BaseCost": 0.5,
+      "BaseMagnitude": 100,
+      "BaseDuration": 5,
+      "Value": 265
+    },
+    {
+      "Id": 4,
+      "Name": "Damage Stamina",
+      "IngredientMods": [{"Id": 25, "Magnitude": 3}],
+      "BaseCost": 1.8,
+      "BaseMagnitude": 3,
+      "BaseDuration": 0,
+      "Value": 43
+    },
+    {
+      "Id": 5,
+      "Name": "Damage Stamina Regen",
+      "BaseCost": 0.3,
+      "BaseMagnitude": 100,
+      "BaseDuration": 5,
+      "Value": 159
+    },
+    {
+      "Id": 6,
+      "Name": "Fear",
+      "IngredientMods": [],
+      "BaseCost": 5,
+      "BaseMagnitude": 1,
+      "BaseDuration": 30,
+      "Value": 120
+    },
+    {
+      "Id": 7,
+      "Name": "Fortify Alteration",
+      "IngredientMods": [],
+      "BaseCost": 0.2,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 47
+    },
+    {
+      "Id": 8,
+      "Name": "Fortify Barter",
+      "IngredientMods": [],
+      "BaseCost": 2,
+      "BaseMagnitude": 1,
+      "BaseDuration": 30,
+      "Value": 48
+    },
+    {
+      "Id": 9,
+      "Name": "Fortify Block",
+      "IngredientMods": [
+        {"Id": 16, "Magnitude": 0.5},
+        {"Id": 55, "Magnitude": 0.5}
+      ],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 4,
+      "BaseDuration": 300,
+      "Value": 208
+    },
+    {
+      "Id": 10,
+      "Name": "Fortify Carry Weight",
+      "IngredientMods": [],
+      "BaseCost": 0.15,
+      "BaseMagnitude": 4,
+      "BaseDuration": 300,
+      "Value": 208
+    },
+    {
+      "Id": 11,
+      "Name": "Fortify Conjuration",
+      "IngredientMods": [],
+      "BaseCost": 0.25,
+      "BaseMagnitude": 5,
+      "BaseDuration": 60,
+      "Value": 75
+    },
+    {
+      "Id": 12,
+      "Name": "Fortify Destruction",
+      "IngredientMods": [
+        {"Id": 31, "Magnitude": 0.8},
+        {"Id": 71, "Magnitude": 0.8}
+      ],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 5,
+      "BaseDuration": 60,
+      "Value": 151
+    },
+    {
+      "Id": 13,
+      "Name": "Fortify Enchanting",
+      "IngredientMods": [],
+      "BaseCost": 0.6,
+      "BaseMagnitude": 1,
+      "BaseDuration": 30,
+      "Value": 14
+    },
+    {
+      "Id": 14,
+      "Name": "Fortify Health",
+      "IngredientMods": [
+        {"Id": 14, "Value": 5.9},
+        {"Id": 43, "Value": 5.9}
+      ],
+      "BaseCost": 0.35,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 82
+    },
+    {
+      "Id": 15,
+      "Name": "Fortify Heavy Armor",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 2,
+      "BaseDuration": 60,
+      "Value": 55
+    },
+    {
+      "Id": 16,
+      "Name": "Fortify Illusion",
+      "IngredientMods": [],
+      "BaseCost": 0.4,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 94
+    },
+    {
+      "Id": 17,
+      "Name": "Fortify Light Armor",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 2,
+      "BaseDuration": 60,
+      "Value": 55
+    },
+    {
+      "Id": 18,
+      "Name": "Fortify Lockpicking",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 2,
+      "BaseDuration": 30,
+      "Value": 25
+    },
+    {
+      "Id": 19,
+      "Name": "Fortify Magicka",
+      "IngredientMods": [],
+      "BaseCost": 0.3,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 71
+    },
+    {
+      "Id": 20,
+      "Name": "Fortify Marksman",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 118
+    },
+    {
+      "Id": 21,
+      "Name": "Fortify One-handed",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 118
+    },
+    {
+      "Id": 22,
+      "Name": "Fortify Pickpocket",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 118
+    },
+    {
+      "Id": 23,
+      "Name": "Fortify Restoration",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 118
+    },
+    {
+      "Id": 24,
+      "Name": "Fortify Smithing",
+      "IngredientMods": [],
+      "BaseCost": 0,
+      "BaseMagnitude": 0,
+      "BaseDuration": 0,
+      "Value": 0
+    },
+    {
+      "Id": 25,
+      "Name": "Fortify Sneak",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 118
+    },
+    {
+      "Id": 26,
+      "Name": "Fortify Stamina",
+      "IngredientMods": [
+        {"Id": 14, "Value": 5.9},
+        {"Id": 14, "Magnitude": 1.25}
+      ],
+      "BaseCost": 0.3,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 71
+    },
+    {
+      "Id": 27,
+      "Name": "Fortify Two-handed",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 118
+    },
+    {
+      "Id": 28,
+      "Name": "Frenzy",
+      "IngredientMods": [],
+      "BaseCost": 15,
+      "BaseMagnitude": 1,
+      "BaseDuration": 10,
+      "Value": 107
+    },
+    {
+      "Id": 29,
+      "Name": "Invisibility",
+      "BaseCost": 100,
+      "BaseMagnitude": 0,
+      "BaseDuration": 4,
+      "Value": 261
+    },
+    {
+      "Id": 30,
+      "Name": "Lingering Damage Health",
+      "IngredientMods": [],
+      "BaseCost": 12,
+      "BaseMagnitude": 1,
+      "BaseDuration": 10,
+      "Value": 86
+    },
+    {
+      "Id": 31,
+      "Name": "Lingering Damage Magicka",
+      "IngredientMods": [],
+      "BaseCost": 10,
+      "BaseMagnitude": 1,
+      "BaseDuration": 10,
+      "Value": 71
+    },
+    {
+      "Id": 32,
+      "Name": "Lingering Damage Stamina",
+      "IngredientMods": [],
+      "BaseCost": 1.8,
+      "BaseMagnitude": 1,
+      "BaseDuration": 10,
+      "Value": 12
+    },
+    {
+      "Id": 33,
+      "Name": "Paralysis",
+      "BaseCost": 500,
+      "BaseMagnitude": 0,
+      "BaseDuration": 1,
+      "Value": 285
+    },
+    {
+      "Id": 34,
+      "Name": "Ravage Health",
+      "IngredientMods": [],
+      "BaseCost": 500,
+      "BaseMagnitude": 0,
+      "BaseDuration": 1,
+      "Value": 285
+    },
+    {
+      "Id": 35,
+      "Name": "Ravage Magicka",
+      "IngredientMods": [],
+      "BaseCost": 1,
+      "BaseMagnitude": 2,
+      "BaseDuration": 10,
+      "Value": 15
+    },
+    {
+      "Id": 36,
+      "Name": "Ravage Stamina",
+      "IngredientMods": [
+        {"Id": 28, "Value": 2.1}
+      ],
+      "BaseCost": 1.6,
+      "BaseMagnitude": 2,
+      "BaseDuration": 10,
+      "Value": 24
+    },
+    {
+      "Id": 37,
+      "Name": "Regenerate Health",
+      "IngredientMods": [],
+      "BaseCost": 0.1,
+      "BaseMagnitude": 5,
+      "BaseDuration": 300,
+      "Value": 177
+    },
+    {
+      "Id": 38,
+      "Name": "Regenerate Magicka",
+      "IngredientMods": [],
+      "BaseCost": 0.1,
+      "BaseMagnitude": 5,
+      "BaseDuration": 300,
+      "Value": 177
+    },
+    {
+      "Id": 39,
+      "Name": "Regenerate Stamina",
+      "IngredientMods": [],
+      "BaseCost": 0.1,
+      "BaseMagnitude": 5,
+      "BaseDuration": 300,
+      "Value": 177
+    },
+    {
+      "Id": 40,
+      "Name": "Resist Fire",
+      "IngredientMods": [
+        {"Id": 4, "Magnitude": 1.33}
+      ],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 3,
+      "BaseDuration": 60,
+      "Value": 86
+    },
+    {
+      "Id": 41,
+      "Name": "Resist Frost",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 3,
+      "BaseDuration": 60,
+      "Value": 86
+    },
+    {
+      "Id": 42,
+      "Name": "Resist Magic",
+      "IngredientMods": [],
+      "BaseCost": 1,
+      "BaseMagnitude": 1,
+      "BaseDuration": 60,
+      "Value": 51
+    },
+    {
+      "Id": 43,
+      "Name": "Resist Poison",
+      "IngredientMods": [
+        {"Id": 7, "Magnitude": 0.5},
+        {"Id": 100, "Magnitude": 0.75}
+      ],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 4,
+      "BaseDuration": 60,
+      "Value": 118
+    },
+    {
+      "Id": 44,
+      "Name": "Resist Shock",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 3,
+      "BaseDuration": 60,
+      "Value": 86
+    },
+    {
+      "Id": 45,
+      "Name": "Restore Health",
+      "IngredientMods": [
+        {"Id": 10, "Magnitude": 0.6},
+        {"Id": 59, "Magnitude": 0.6}
+      ],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 5,
+      "BaseDuration": 0,
+      "Value": 21
+    },
+    {
+      "Id": 46,
+      "Name": "Restore Magicka",
+      "IngredientMods": [],
+      "BaseCost": 0.6,
+      "BaseMagnitude": 5,
+      "BaseDuration": 0,
+      "Value": 25
+    },
+    {
+      "Id": 47,
+      "Name": "Restore Stamina",
+      "IngredientMods": [
+        {"Id": 70, "Magnitude": 2},
+        {"Id": 5, "Magnitude": 0.8},
+        {"Id": 84, "Magnitude": 0.4}
+      ],
+      "BaseCost": 0.6,
+      "BaseMagnitude": 5,
+      "BaseDuration": 0,
+      "Value": 25
+    },
+    {
+      "Id": 48,
+      "Name": "Slow",
+      "BaseCost": 1,
+      "BaseMagnitude": 50,
+      "BaseDuration": 5,
+      "Value": 247
+    },
+    {
+      "Id": 49,
+      "Name": "Waterbreathing",
+      "IngredientMods": [
+        {"Id": 84, "Value": 15.4}
+      ],
+      "BaseCost": 30,
+      "BaseMagnitude": 0,
+      "BaseDuration": 5,
+      "Value": 100
+    },
+    {
+      "Id": 50,
+      "Name": "Weakness to Fire",
+      "IngredientMods": [],
+      "BaseCost": 0.6,
+      "BaseMagnitude": 3,
+      "BaseDuration": 30,
+      "Value": 48
+    },
+    {
+      "Id": 51,
+      "Name": "Weakness to Frost",
+      "IngredientMods": [],
+      "BaseCost": 0.5,
+      "BaseMagnitude": 3,
+      "BaseDuration": 30,
+      "Value": 40
+    },
+    {
+      "Id": 52,
+      "Name": "Weakness to Magic",
+      "IngredientMods": [],
+      "BaseCost": 1,
+      "BaseMagnitude": 2,
+      "BaseDuration": 30,
+      "Value": 51
+    },
+    {
+      "Id": 53,
+      "Name": "Weakness to Poison",
+      "IngredientMods": [],
+      "BaseCost": 1,
+      "BaseMagnitude": 2,
+      "BaseDuration": 30,
+      "Value": 51
+    },
+    {
+      "Id": 54,
+      "Name": "Weakness to Shock",
+      "IngredientMods": [],
+      "BaseCost": 0.7,
+      "BaseMagnitude": 3,
+      "BaseDuration": 30,
+      "Value": 56
+    }
+  ]
+}
